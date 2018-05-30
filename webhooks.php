@@ -9,14 +9,12 @@
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
     
     //รับข้อความจากผู้ใช้
-    $message = $arrayJson['events'][0]['message']['text']['text2'];
+    $message = $arrayJson['events'][0]['message']['text'];
 #ตัวอย่าง Message Type "Text"
     if($message == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีครับ";
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text2'] = "เราคือไอทีบอท";
+        $arrayPostData['messages'][0]['text'] = "สวัสดีครับ...เราคือไอทีบอท";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
@@ -28,8 +26,8 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Image"
-    else if($message == "รูปน้องแมว"){
-        $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
+    else if($message == "ตารางรถ"){
+        $image_url = "https://uppicimg.com/v/5W0dFXSq";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
