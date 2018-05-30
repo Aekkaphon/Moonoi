@@ -15,7 +15,7 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีครับ";
-        $arrayPostData['messages'][0]['type'] = "text2";
+        $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text2'] = "เราคือไอทีบอท";
         replyMsg($arrayHeader,$arrayPostData);
     }
