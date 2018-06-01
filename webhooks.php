@@ -14,7 +14,7 @@
     if($message == "ทำไมแฟนลิเวอร์พูลกินก๋วยเตี๋ยวไม่ได้"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เพราะลิเวอร์พูลไม่ได้แชมป์ (ก๊วยเตี๋ยวแชมป์)";
+        $arrayPostData['messages'][0]['text'] = "เพราะลิเวอร์พูลไม่ได้แชมป์ ก็เลยไม่กินก๊วยเตี๋ยวแชมป์";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
