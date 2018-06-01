@@ -11,10 +11,10 @@
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
 #ตัวอย่าง Message Type "Text"
-    if($message == "ทดสอบ"){
+    if($message == "ทำไมแฟนลิเวอร์พูลกินก๋วยเตี๋ยวไม่ได้"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีครับ...เราคือไอทีบอท";
+        $arrayPostData['messages'][0]['text'] = "เพราะลิเวอร์พูลไม่ได้แชมป์ (ก๊วยเตี๋ยวแชมป์)";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
